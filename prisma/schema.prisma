@@ -18,6 +18,8 @@ model Cadastrousuarios{
   nome String
   email String
   senha String
+  cpf String
+  
   
   create_at DateTime? @default(now())
   update_at DateTime? @default(now())

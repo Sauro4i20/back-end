@@ -1,10 +1,10 @@
 import { Router } from 'express'
 
-import { UsuarioController } from './controller/Usuarios/usuarios';
+import { ClienteController } from './controller/Clientes/cliente';
 
 const router = Router()
 
-router.post('/Usuarios', new UsuarioController().CadastroUsuarios)
-router.get('/ConsultarUsuarios' , new UsuarioController().consultarUsuarios) 
+router.post('/Clientes', new ClienteController().CadastroClientes)
+router.get('/ConsultarCliente' , ClienteController().consultarClientes) 
 
 export default router

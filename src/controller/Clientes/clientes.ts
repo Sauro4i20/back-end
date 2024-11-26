@@ -1,16 +1,17 @@
 import { Request, Response } from "express";
-import { UsuarioServices } from "../../services/usuarios/usuariosServices";
+import { UsuarioServices } from "../../services/clientes/clientesServices";
 
 
 
 class UsuarioController {
   async CadastroUsuarios(req: Request, res: Response) {
-    const { nome, email, password } = req.body;
+    const { nome, email, password, cpf } = req.body;
     const usuarioServices = new UsuarioServices()
     const resposta = await usuarioServices.cadastrar_usuarios({
       nome,
       email,
-      password
+      password,
+      cpf
     })
     return res.json(resposta)
   }
@@ -25,3 +26,4 @@ class UsuarioController {
 }
 
 export { UsuarioController };
+  
